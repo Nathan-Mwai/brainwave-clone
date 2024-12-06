@@ -5,7 +5,7 @@ import Button from './Button'
 import { disablePageScroll, enablePageScroll } from 'scroll-lock'
 
 import MenuSvg from '../assets/svg/MenuSvg'
-import {HamburgerMenu} from './design/Header'
+import {HamburgerMenu} from '../design/Header'
 import { useState } from 'react'
 
 const Header = () => {
