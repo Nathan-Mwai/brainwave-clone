@@ -16,12 +16,14 @@ const Benefits = () => {
           {benefits.map((item) => (
             <div
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
-              style={{
-                backgroundImage: `url(${item.backgroundUrl})`,
-              }}
+              style={
+                {
+                  backgroundImage: `url(${item.backgroundUrl})`
+                }
+              }
               key={item.id}
             >
-              <div>
+              <div className="rela">
                 <h5>{item.title}</h5>
               </div>
             </div>
