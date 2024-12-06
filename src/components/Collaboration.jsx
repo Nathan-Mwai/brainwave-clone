@@ -31,20 +31,29 @@ const Collaboration = () => {
             <div className='lg:ml-auto xl:w-[38rem] mt-4'>
                 <p className='body-2 mb-4 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto'>{collabText}</p>
 
+                {/* The orbit starts from here the largest orbit */}
                 <div className='relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100'>
+                {/* The seccond orbit */}
                 <div
                 className='flex w-60 aspect-square m-auto border border-n-6 rounded-full'>
+                    {/* The inner most orbit */}
                     <div className='w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full'>
                         <div className='flex items-center justify-center w-full h-full bg-n-8 rounded-full'>
                             <img src={brainwaveSymbol} width={48} height={48} alt="brainwave" />
                         </div>
                     </div>
                 </div>
+                {/* This is now where I render the pictures to be diaplyed  */}
                 <ul>
                     {collabApps.map((app, index)=>(
                         <li key={app.id} className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${index * 45}`}>
-                            <div>
-                                <img src={app.icon} alt="" />
+                            <div className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${index * 45}`}>
+                                <img 
+                                className='m-auto'
+                                width={app.width}
+                                height={app.height}
+                                alt={app.title}
+                                src={app.icon} />
                             </div>
                         </li>
                     ))}
