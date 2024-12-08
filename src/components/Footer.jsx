@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="container flex sm:justify-between justify-center items-center gap-10 max-sm:flex-col">
             {/*new Date().getFullYear() This is to make it auto update so that I don't have to come back to the code and write it kind good for future development  */}
             <p className="caption text-n-4 lg:block">
-          © {new Date().getFullYear()}. All rights reserved.
+          © {new Date().getFullYear()}. No rights reserved feel free to clone.
         </p>
 
         <ul className="flex gap-5 flex-wrap">
